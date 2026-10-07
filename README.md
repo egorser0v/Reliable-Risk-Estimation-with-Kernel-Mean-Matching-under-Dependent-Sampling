@@ -1,12 +1,13 @@
 
-# Kernel Mean Matching under Dependent Sampling (Synthetic & Real Experiments)
+# Reliable Risk Estimation with Kernel Mean Matching under Dependent Sampling
 
 This directory contains the complete source code for reproducing the synthetic experimental results, ablation studies, and real-data benchmarks reported in the paper:
 
-> **Kernel Mean Matching under Dependent Sampling**  
+> **Reliable Risk Estimation with Kernel Mean Matching under Dependent Sampling**  
+> *Anonymous Authors*  
 > *Under review at AISTATS 2027*
 
----
+--- 
 
 ## 1. Directory Structure
 
