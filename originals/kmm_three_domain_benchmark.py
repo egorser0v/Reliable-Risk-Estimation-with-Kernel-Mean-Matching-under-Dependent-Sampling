@@ -29,7 +29,7 @@ from threadpoolctl import threadpool_limits
 
 SEED = 20261005
 OUT = ROOT / 'results/kmm_three_domain'
-NOAA = Path(os.environ.get('KMM_NOAA_ROOT', r'C:\Users\User\Documents\Codex\2026-08-31\x20\work\ghcn_75_candidates'))
+NOAA = Path(os.environ.get('KMM_NOAA_ROOT', r'abc'))
 B = 10.
 
 
