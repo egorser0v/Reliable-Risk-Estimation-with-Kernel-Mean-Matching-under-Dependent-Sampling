@@ -147,4 +147,4 @@ python experiments_real/verify_kmm_three_domain.py
    For nominal $95\%$ intervals over $N = 300$ repetitions, empirical coverage is considered statistically valid if it meets or exceeds the binomial two-sigma lower bound:
    $$0.95 - 1.96 \sqrt{\frac{0.95 \times 0.05}{300}} \approx 0.925.$$
    Any coverage falling below $0.925$ is automatically flagged with an asterisk (`*`).
-```
+
