@@ -1,0 +1,54 @@
+\begin{table*}[!htbp]
+\centering
+\caption{\textbf{Sample-size scaling of Target Risk intervals ($n \in \{32, \dots, 256\}$).} Bold highlights the best valid practical estimator (tightest radius and lowest Winkler Score among methods maintaining valid coverage). Asterisks ($^*$) indicate significant empirical undercoverage below the nominal 0.95 level ($< 0.925$). Strict Thm 1 is excluded from best-method highlighting due to worst-case conservatism.}
+\label{tab:n_scaling_risk}
+\vspace{1.5mm}
+\resizebox{0.78\textwidth}{!}{%
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+$\bm{n}$ & \textbf{Method} & \textbf{Coverage} & \textbf{Radius} & \textbf{Winkler Score} $\downarrow$ & $\bm{n_{\mathrm{eff}}}$ \\
+\midrule
+\multirow{5}{*}{32} 
+& Unweighted         & 0.717$^*$ & 0.0026 & 0.0201 & 32.0 \\
+& Nominal $n$        & 0.647$^*$ & 0.0047 & 0.0394 & 32.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.893$^*$ & 0.0123 & 0.0325 & 4.6 \\
+& GP $n_{\mathrm{eff}}$ (Ours) & 0.850$^*$ & 0.0098 & 0.0313 & 7.3 \\
+\midrule
+\multirow{5}{*}{48} 
+& Unweighted         & 0.727$^*$ & 0.0022 & 0.0143 & 48.0 \\
+& Nominal $n$        & 0.773$^*$ & 0.0048 & 0.0275 & 48.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.910$^*$ & 0.0128 & 0.0290 & 6.7 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.943} & \textbf{0.0101} & \textbf{0.0260} & \textbf{10.7} \\
+\midrule
+\multirow{5}{*}{64} 
+& Unweighted         & 0.773$^*$ & 0.0020 & 0.0124 & 64.0 \\
+& Nominal $n$        & 0.773$^*$ & 0.0046 & 0.0218 & 64.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.980     & 0.0124 & 0.0258 & 8.8 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.947} & \textbf{0.0098} & \textbf{0.0217} & \textbf{14.1} \\
+\midrule
+\multirow{5}{*}{96} 
+& Unweighted         & 0.770$^*$ & 0.0016 & 0.0101 & 96.0 \\
+& Nominal $n$        & 0.803$^*$ & 0.0043 & 0.0188 & 96.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.973     & 0.0117 & 0.0251 & 13.1 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.957} & \textbf{0.0092} & \textbf{0.0213} & \textbf{21.0} \\
+\midrule
+\multirow{5}{*}{128} 
+& Unweighted         & 0.750$^*$ & 0.0014 & 0.0083 & 128.0 \\
+& Nominal $n$        & 0.823$^*$ & 0.0038 & 0.0155 & 128.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.983     & 0.0104 & 0.0220 & 17.3 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.970} & \textbf{0.0082} & \textbf{0.0181} & \textbf{27.9} \\
+\midrule
+\multirow{5}{*}{192} 
+& Unweighted         & 0.750$^*$ & 0.0011 & 0.0071 & 192.0 \\
+& Nominal $n$        & 0.887$^*$ & 0.0033 & 0.0109 & 192.0 \\
+& Input $n_{\mathrm{eff}}$ & 0.987     & 0.0091 & 0.0187 & 25.9 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.980} & \textbf{0.0072} & \textbf{0.0152} & \textbf{41.7} \\
+\midrule
+\multirow{5}{*}{256} 
+& Unweighted         & 0.743$^*$ & 0.0010 & 0.0062 & 256.0 \\
+& Nominal $n$        & 0.913$^*$ & 0.0031 & 0.0076 & 256.0 \\
+& Input $n_{\mathrm{eff}}$ & 1.000     & 0.0085 & 0.0170 & 34.4 \\
+& \textbf{GP $n_{\mathrm{eff}}$ (Ours)} & \textbf{0.997} & \textbf{0.0067} & \textbf{0.0134} & \textbf{55.4} \\
+\bottomrule
+\end{tabular}}
+\end{table*}

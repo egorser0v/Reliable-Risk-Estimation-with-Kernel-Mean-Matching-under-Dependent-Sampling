@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Target-mean estimation. Outcomes are bounded in [0,1]; risk is squared error of a separately trained, frozen random forest. Intervals are nominal 95% source-only plug-in intervals, conditional on fitted weights and target covariates. Coverage is a descriptive finite-target benchmark, not theorem coverage. Repeated tasks share domains.}
+\label{tab:real_mean}
+\begin{tabular}{llrrrrrr}
+\toprule
+dataset &           method &    MAE &  Coverage &  Half\_width &      ESS &  Tasks &  Domains \\
+\midrule
+   NOAA &       Unweighted & 0.0503 &    0.1986 &      0.0157 &  90.0709 &    141 &       12 \\
+   NOAA &      Logistic IW & 0.0389 &    0.2766 &      0.0209 &  50.2826 &    141 &       12 \\
+   NOAA &              KMM & 0.0379 &    0.5461 &      0.0352 &  14.2594 &    141 &       12 \\
+   NOAA & KMM + dependence & 0.0379 &    0.6738 &      0.0458 &   8.7576 &    141 &       12 \\
+   PM25 &       Unweighted & 0.0208 &    0.6875 &      0.0256 &  91.1042 &     48 &       12 \\
+   PM25 &      Logistic IW & 0.0270 &    0.7708 &      0.0374 &  44.4651 &     48 &       12 \\
+   PM25 &              KMM & 0.0155 &    0.9792 &      0.0540 &  18.0603 &     48 &       12 \\
+   PM25 & KMM + dependence & 0.0155 &    0.9792 &      0.0585 &  15.4639 &     48 &       12 \\
+   TNBC &       Unweighted & 0.0396 &    0.2821 &      0.0140 & 256.0000 &     78 &       26 \\
+   TNBC &      Logistic IW & 0.0405 &    0.4359 &      0.0291 &  22.3014 &     78 &       26 \\
+   TNBC &              KMM & 0.0387 &    0.5128 &      0.0337 &  29.3412 &     78 &       26 \\
+   TNBC & KMM + dependence & 0.0387 &    0.5256 &      0.0359 &  20.8315 &     78 &       26 \\
+\bottomrule
+\end{tabular}
+\end{table}

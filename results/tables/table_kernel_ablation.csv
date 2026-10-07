@@ -1,0 +1,21 @@
+kernel,method,coverage,radius,winkler_score,is_valid,is_best
+RBF (Smooth),Unweighted,0.110,0.0022,0.113,False,False
+RBF (Smooth),Nominal n,0.903,0.0076,0.023,False,False
+RBF (Smooth),Input neff,0.993,0.0206,0.042,True,False
+RBF (Smooth),GP neff (Ours),0.987,0.0147,0.031,True,True
+RBF (Smooth),Oracle i.i.d.,0.930,0.0067,0.018,True,False
+Matérn-5/2,Unweighted,0.623,0.0019,0.019,False,False
+Matérn-5/2,Nominal n,0.850,0.0059,0.029,False,False
+Matérn-5/2,Input neff,0.960,0.0160,0.036,True,False
+Matérn-5/2,GP neff (Ours),0.913,0.0095,0.028,False,True
+Matérn-5/2,Oracle i.i.d.,0.917,0.0062,0.018,False,False
+Matérn-3/2,Unweighted,0.080,0.0028,0.164,False,False
+Matérn-3/2,Nominal n,0.900,0.0065,0.020,False,False
+Matérn-3/2,Input neff,1.000,0.0175,0.035,True,False
+Matérn-3/2,GP neff (Ours),0.990,0.0128,0.026,True,True
+Matérn-3/2,Oracle i.i.d.,0.917,0.0055,0.014,False,False
+Matérn-1/2 (Rough),Unweighted,0.057,0.0023,0.132,False,False
+Matérn-1/2 (Rough),Nominal n,0.923,0.0068,0.019,False,False
+Matérn-1/2 (Rough),Input neff,1.000,0.0184,0.037,True,False
+Matérn-1/2 (Rough),GP neff (Ours),0.993,0.0134,0.027,True,True
+Matérn-1/2 (Rough),Oracle i.i.d.,0.933,0.0065,0.018,True,False

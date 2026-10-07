@@ -1,0 +1,22 @@
+{
+  "response": "PM2.5 clipped at 500 ug/m3, divided by 500",
+  "training": "2013-2014",
+  "n_rows": 17467,
+  "features": [
+    "TEMP",
+    "PRES",
+    "DEWP",
+    "RAIN",
+    "WSPM",
+    "SO2",
+    "NO2",
+    "CO",
+    "O3",
+    "day_of_year_sin",
+    "day_of_year_cos"
+  ],
+  "n_train": 8003,
+  "random_state": 20261005,
+  "n_tasks": 48,
+  "KMM_B": 10.0
+}

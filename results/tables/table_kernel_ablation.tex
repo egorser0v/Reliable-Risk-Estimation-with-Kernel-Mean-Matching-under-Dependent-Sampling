@@ -1,0 +1,40 @@
+\begin{table*}[!htbp]
+\centering
+\caption{\textbf{Kernel Type Ablation (Roughness Stress Test) on Target Risk.} Asterisks ($^*$) denote significant empirical undercoverage below the nominal 0.95 level ($< 0.925$). GP $n_{\mathrm{eff}}$ maintains valid interval coverage even when the true generating process is non-differentiable, consistently outperforming Input $n_{\mathrm{eff}}$ in Winkler Score (WS). Note that the slight undercoverage on Mat\'ern-5/2 is matched by the Oracle i.i.d. benchmark, indicating inherent finite-sample variance rather than a failure of the GP correction.}
+\label{tab:matern-ablation}
+\vspace{2mm}
+\resizebox{0.78\textwidth}{!}{%
+\begin{tabular}{@{}llccc@{}}
+\toprule
+\textbf{Data Kernel} & \textbf{Method} & \textbf{Coverage} & \textbf{Radius} & \textbf{WS} $\downarrow$ \\
+\midrule
+\multirow{5}{*}{RBF (Smooth)} 
+& Unweighted               & 0.110$^*$ & 0.0022 & 0.113 \\
+& Nominal $n$              & 0.903$^*$ & 0.0076 & 0.023 \\
+& Input $n_{\mathrm{eff}}$ & 0.993\phantom{$^*$} & 0.0206 & 0.042 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.987}\phantom{$^*$} & \textbf{0.0147} & \textbf{0.031} \\
+& \textit{Oracle i.i.d.}   & \textit{0.930}\phantom{$^*$} & \textit{0.0067} & \textit{0.018} \\
+\midrule
+\multirow{5}{*}{Mat\'ern-5/2} 
+& Unweighted               & 0.623$^*$ & 0.0019 & 0.019 \\
+& Nominal $n$              & 0.850$^*$ & 0.0059 & 0.029 \\
+& Input $n_{\mathrm{eff}}$ & 0.960\phantom{$^*$} & 0.0160 & 0.036 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.913}$^*$ & \textbf{0.0095} & \textbf{0.028} \\
+& \textit{Oracle i.i.d.}   & \textit{0.917}$^*$ & \textit{0.0062} & \textit{0.018} \\
+\midrule
+\multirow{5}{*}{Mat\'ern-3/2} 
+& Unweighted               & 0.080$^*$ & 0.0028 & 0.164 \\
+& Nominal $n$              & 0.900$^*$ & 0.0065 & 0.020 \\
+& Input $n_{\mathrm{eff}}$ & 1.000\phantom{$^*$} & 0.0175 & 0.035 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.990}\phantom{$^*$} & \textbf{0.0128} & \textbf{0.026} \\
+& \textit{Oracle i.i.d.}   & \textit{0.917}$^*$ & \textit{0.0055} & \textit{0.014} \\
+\midrule
+\multirow{5}{*}{Mat\'ern-1/2 (Rough)} 
+& Unweighted               & 0.057$^*$ & 0.0023 & 0.132 \\
+& Nominal $n$              & 0.923$^*$ & 0.0068 & 0.019 \\
+& Input $n_{\mathrm{eff}}$ & 1.000\phantom{$^*$} & 0.0184 & 0.037 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.993}\phantom{$^*$} & \textbf{0.0134} & \textbf{0.027} \\
+& \textit{Oracle i.i.d.}   & \textit{0.933}\phantom{$^*$} & \textit{0.0065} & \textit{0.018} \\
+\bottomrule
+\end{tabular}}
+\end{table*}

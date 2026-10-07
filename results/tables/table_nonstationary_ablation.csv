@@ -1,0 +1,16 @@
+profile,method,coverage,radius,winkler_score,is_valid,is_best
+Stationary,Unweighted,0.700,0.0020,0.013,False,False
+Stationary,Nominal n,0.900,0.0048,0.014,False,False
+Stationary,Input neff,0.993,0.0120,0.024,True,False
+Stationary,GP neff (Ours),0.990,0.0099,0.020,True,True
+Stationary,Oracle i.i.d.,0.887,0.0041,0.012,False,False
+Abrupt Switch,Unweighted,0.717,0.0020,0.014,False,False
+Abrupt Switch,Nominal n,0.880,0.0046,0.014,False,False
+Abrupt Switch,Input neff,0.997,0.0114,0.023,True,False
+Abrupt Switch,GP neff (Ours),0.990,0.0094,0.019,True,True
+Abrupt Switch,Oracle i.i.d.,0.913,0.0042,0.012,False,False
+Smooth Wave,Unweighted,0.750,0.0020,0.011,False,False
+Smooth Wave,Nominal n,0.893,0.0046,0.016,False,False
+Smooth Wave,Input neff,0.997,0.0115,0.023,True,False
+Smooth Wave,GP neff (Ours),0.983,0.0095,0.020,True,True
+Smooth Wave,Oracle i.i.d.,0.903,0.0041,0.011,False,False

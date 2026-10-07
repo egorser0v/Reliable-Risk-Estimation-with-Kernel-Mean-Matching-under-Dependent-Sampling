@@ -1,0 +1,25 @@
+param_val,method,coverage,radius,winkler_score,neff,is_valid,is_best
+1.00,Unweighted,0.173,0.0023,0.0749,96.0,False,False
+1.00,Nominal n,0.910,0.0062,0.0194,96.0,False,False
+1.00,Input neff,0.993,0.0167,0.0338,13.1,True,False
+1.00,GP neff (Ours),0.983,0.0129,0.0271,22.0,True,True
+1.25,Unweighted,0.047,0.0018,0.1597,96.0,False,False
+1.25,Nominal n,0.917,0.0072,0.0183,96.0,False,False
+1.25,Input neff,0.993,0.0195,0.0395,13.1,True,False
+1.25,GP neff (Ours),0.990,0.0156,0.0320,20.6,True,True
+1.50,Unweighted,0.037,0.0015,0.1371,96.0,False,False
+1.50,Nominal n,0.827,0.0057,0.0233,96.0,False,False
+1.50,Input neff,0.983,0.0154,0.0316,13.1,True,False
+1.50,GP neff (Ours),0.980,0.0128,0.0272,18.8,True,True
+1.75,Unweighted,0.137,0.0028,0.1304,96.0,False,False
+1.75,Nominal n,0.907,0.0070,0.0188,96.0,False,False
+1.75,Input neff,0.997,0.0189,0.0378,13.1,True,False
+1.75,GP neff (Ours),0.990,0.0136,0.0281,25.4,True,True
+2.00,Unweighted,0.277,0.0017,0.0536,96.0,False,False
+2.00,Nominal n,0.860,0.0057,0.0220,96.0,False,False
+2.00,Input neff,0.987,0.0154,0.0323,13.1,True,False
+2.00,GP neff (Ours),0.970,0.0116,0.0257,23.2,True,True
+3.00,Unweighted,0.490,0.0018,0.0292,96.0,False,False
+3.00,Nominal n,0.877,0.0057,0.0187,96.0,False,False
+3.00,Input neff,0.990,0.0153,0.0310,13.1,True,False
+3.00,GP neff (Ours),0.983,0.0113,0.0238,23.9,True,True

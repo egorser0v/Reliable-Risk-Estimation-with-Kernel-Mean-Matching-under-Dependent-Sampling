@@ -1,0 +1,72 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=1.7cm]{geometry}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\begin{document}
+\title{Real-data KMM: target means and fixed-model risks}
+\author{}\date{}\maketitle
+\noindent This is an empirical stress test. Each predictor is trained separately and frozen.
+Target labels are revealed only for evaluation. All errors and interval widths are in normalized units.
+Tasks share stations or patients; they are not independent repetitions.
+\small
+\begin{table}[t]
+\centering
+\caption{Target-mean estimation. Outcomes are bounded in [0,1]; risk is squared error of a separately trained, frozen random forest. Intervals are nominal 95% source-only plug-in intervals, conditional on fitted weights and target covariates. Coverage is a descriptive finite-target benchmark, not theorem coverage. Repeated tasks share domains.}
+\label{tab:real_mean}
+\begin{tabular}{llrrrrrr}
+\toprule
+dataset &           method &    MAE &  Coverage &  Half\_width &      ESS &  Tasks &  Domains \\
+\midrule
+   NOAA &       Unweighted & 0.0503 &    0.1986 &      0.0157 &  90.0709 &    141 &       12 \\
+   NOAA &      Logistic IW & 0.0389 &    0.2766 &      0.0209 &  50.2826 &    141 &       12 \\
+   NOAA &              KMM & 0.0379 &    0.5461 &      0.0352 &  14.2594 &    141 &       12 \\
+   NOAA & KMM + dependence & 0.0379 &    0.6738 &      0.0458 &   8.7576 &    141 &       12 \\
+   PM25 &       Unweighted & 0.0208 &    0.6875 &      0.0256 &  91.1042 &     48 &       12 \\
+   PM25 &      Logistic IW & 0.0270 &    0.7708 &      0.0374 &  44.4651 &     48 &       12 \\
+   PM25 &              KMM & 0.0155 &    0.9792 &      0.0540 &  18.0603 &     48 &       12 \\
+   PM25 & KMM + dependence & 0.0155 &    0.9792 &      0.0585 &  15.4639 &     48 &       12 \\
+   TNBC &       Unweighted & 0.0396 &    0.2821 &      0.0140 & 256.0000 &     78 &       26 \\
+   TNBC &      Logistic IW & 0.0405 &    0.4359 &      0.0291 &  22.3014 &     78 &       26 \\
+   TNBC &              KMM & 0.0387 &    0.5128 &      0.0337 &  29.3412 &     78 &       26 \\
+   TNBC & KMM + dependence & 0.0387 &    0.5256 &      0.0359 &  20.8315 &     78 &       26 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\begin{table}[t]
+\centering
+\caption{Fixed-predictor target-risk estimation. Outcomes are bounded in [0,1]; risk is squared error of a separately trained, frozen random forest. Intervals are nominal 95% source-only plug-in intervals, conditional on fitted weights and target covariates. Coverage is a descriptive finite-target benchmark, not theorem coverage. Repeated tasks share domains.}
+\label{tab:real_risk}
+\begin{tabular}{llrrrrrr}
+\toprule
+dataset &           method &    MAE &  Coverage &  Half\_width &      ESS &  Tasks &  Domains \\
+\midrule
+   NOAA &       Unweighted & 0.0021 &    0.3333 &      0.0008 &  90.0709 &    141 &       12 \\
+   NOAA &      Logistic IW & 0.0021 &    0.4326 &      0.0010 &  50.2826 &    141 &       12 \\
+   NOAA &              KMM & 0.0021 &    0.5745 &      0.0018 &  14.2594 &    141 &       12 \\
+   NOAA & KMM + dependence & 0.0021 &    0.5816 &      0.0019 &  12.8751 &    141 &       12 \\
+   PM25 &       Unweighted & 0.0021 &    0.5833 &      0.0026 &  91.1042 &     48 &       12 \\
+   PM25 &      Logistic IW & 0.0020 &    0.8542 &      0.0037 &  44.4651 &     48 &       12 \\
+   PM25 &              KMM & 0.0024 &    0.9375 &      0.0049 &  18.0603 &     48 &       12 \\
+   PM25 & KMM + dependence & 0.0024 &    0.9583 &      0.0050 &  17.2002 &     48 &       12 \\
+   TNBC &       Unweighted & 0.0213 &    0.2436 &      0.0084 & 256.0000 &     78 &       26 \\
+   TNBC &      Logistic IW & 0.0228 &    0.3846 &      0.0190 &  22.3014 &     78 &       26 \\
+   TNBC &              KMM & 0.0211 &    0.5385 &      0.0198 &  29.3412 &     78 &       26 \\
+   TNBC & KMM + dependence & 0.0211 &    0.5513 &      0.0213 &  25.8007 &     78 &       26 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent PM2.5: 12 stations, four quarters, source 2015 and target 2016; predictor training 2013--2014.
+NOAA: disjoint training, source, and target station pools in 2025; same-season single-station transfer at three distance regimes.
+TNBC: eight training patients and 26 evaluation patients; three local windows per target patient.
+The mean endpoint is clipped PM2.5, clipped TMAX, or clipped processed Ki67 intensity.
+Ki67 and derived phenotypes are excluded from TNBC predictors.
+Risk is squared prediction error on the bounded response.
+
+\medskip\noindent Dependence correction uses calendar-lag Bartlett HAC (14 days) for time series and a Gaussian spatial covariance taper for cells.
+Corrected variance is floored at the independent estimate. Weights are treated as fixed for these plug-in intervals;
+weight-fitting uncertainty and target-population uncertainty are not fully included.
+The reference is the observed finite target-window quantity. Coverage is descriptive and is not verification of the theorem.
+\end{document}

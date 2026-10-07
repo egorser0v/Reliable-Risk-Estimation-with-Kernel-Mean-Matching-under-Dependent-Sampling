@@ -1,0 +1,33 @@
+\begin{table*}[!htbp]
+\centering
+\caption{\textbf{Robustness to Non-Stationary Covariates on Target Risk.} Asterisks ($^*$) indicate significant empirical undercoverage below the nominal 0.95 level ($< 0.925$). Covariates are generated via a non-stationary Gibbs kernel with mean dependence $\bar{\ell}_x = 2.5$. Plugging the trajectory-average correlation length into our stationary formula maintains valid coverage ($\ge 98.3\%$) and yields the lowest Winkler Score (WS) among valid estimators across all non-stationary regimes.}
+\label{tab:nonstationary-ablation}
+\vspace{2mm}
+\resizebox{0.78\textwidth}{!}{%
+\begin{tabular}{@{}llccc@{}}
+\toprule
+\textbf{Dependence Profile} & \textbf{Method} & \textbf{Coverage} & \textbf{Radius} & \textbf{WS} $\downarrow$ \\
+\midrule
+\multirow{5}{*}{Stationary} 
+& Unweighted               & 0.700$^*$ & 0.0020 & 0.013 \\
+& Nominal $n$              & 0.900$^*$ & 0.0048 & 0.014 \\
+& Input $n_{\mathrm{eff}}$ & 0.993\phantom{$^*$} & 0.0120 & 0.024 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.990}\phantom{$^*$} & \textbf{0.0099} & \textbf{0.020} \\
+& \textit{Oracle i.i.d.}   & \textit{0.887}$^*$ & \textit{0.0041} & \textit{0.012} \\
+\midrule
+\multirow{5}{*}{Abrupt Switch} 
+& Unweighted               & 0.717$^*$ & 0.0020 & 0.014 \\
+& Nominal $n$              & 0.880$^*$ & 0.0046 & 0.014 \\
+& Input $n_{\mathrm{eff}}$ & 0.997\phantom{$^*$} & 0.0114 & 0.023 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.990}\phantom{$^*$} & \textbf{0.0094} & \textbf{0.019} \\
+& \textit{Oracle i.i.d.}   & \textit{0.913}$^*$ & \textit{0.0042} & \textit{0.012} \\
+\midrule
+\multirow{5}{*}{Smooth Wave} 
+& Unweighted               & 0.750$^*$ & 0.0020 & 0.011 \\
+& Nominal $n$              & 0.893$^*$ & 0.0046 & 0.016 \\
+& Input $n_{\mathrm{eff}}$ & 0.997\phantom{$^*$} & 0.0115 & 0.023 \\
+& \textbf{GP $\bm{n_{\mathrm{eff}}}$ (Ours)} & \textbf{0.983}\phantom{$^*$} & \textbf{0.0095} & \textbf{0.020} \\
+& \textit{Oracle i.i.d.}   & \textit{0.903}$^*$ & \textit{0.0041} & \textit{0.011} \\
+\bottomrule
+\end{tabular}}
+\end{table*}
