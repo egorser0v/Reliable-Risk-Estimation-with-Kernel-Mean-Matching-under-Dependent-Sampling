@@ -1,0 +1,101 @@
+{
+  "files": [
+    {
+      "id": 47168053,
+      "name": "tnbc.h5ad.gz",
+      "size": 112076059,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/47168053",
+      "supplied_md5": "d3336d053cd1fe264a5581e3f267c8a6",
+      "computed_md5": "d3336d053cd1fe264a5581e3f267c8a6",
+      "mimetype": "application/x-hdf"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 18696574,
+      "full_name": "Qian",
+      "first_name": "",
+      "last_name": "Qian",
+      "is_active": true,
+      "url_name": "Qian",
+      "orcid_id": ""
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://figshare.com/articles/dataset/TNBC_h5ad_gz/26068006",
+  "download_disabled": false,
+  "description": "<p dir=\"ltr\">Processed human triple-negative breast cancer (TNBC) MIBI-TOF dataset from Keren et al. (<i>Cell</i>, 2018), containing 173,205 cells from 19 mixed subtype samples and 15 compartmentalized subtype samples. The cell niches have been identified by scNiche.</p>",
+  "funding": null,
+  "funding_list": [],
+  "version": 2,
+  "status": "public",
+  "size": 112076059,
+  "created_date": "2024-06-21T04:11:31Z",
+  "modified_date": "2024-06-21T04:11:32Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tags": [
+    "human",
+    "triple-negative breast cancer (TNBC)",
+    "MIBI-TOF",
+    "spatial proteomics",
+    "scNiche"
+  ],
+  "keywords": [
+    "human",
+    "triple-negative breast cancer (TNBC)",
+    "MIBI-TOF",
+    "spatial proteomics",
+    "scNiche"
+  ],
+  "categories": [
+    {
+      "id": 24196,
+      "title": "Proteomics and metabolomics",
+      "parent_id": 24181,
+      "path": "/24130/24181/24196",
+      "source_id": "310205",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [],
+  "has_linked_file": false,
+  "citation": "Qian (2024). TNBC.h5ad.gz. figshare. Dataset. https://doi.org/10.6084/m9.figshare.26068006.v2",
+  "related_materials": [],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": null,
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 26068006,
+  "title": "TNBC.h5ad.gz",
+  "doi": "10.6084/m9.figshare.26068006.v2",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/26068006",
+  "published_date": "2024-06-21T04:11:31Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": null,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/26068006",
+  "url_public_api": "https://api.figshare.com/v2/articles/26068006",
+  "url_private_html": "https://figshare.com/account/articles/26068006",
+  "url_public_html": "https://figshare.com/articles/dataset/TNBC_h5ad_gz/26068006",
+  "timeline": {
+    "posted": "2024-06-21T04:11:31",
+    "firstOnline": "2024-06-20"
+  },
+  "resource_title": null,
+  "resource_doi": null
+}

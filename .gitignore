@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .env
 venv/
+data/tnbc/tnbc.h5ad
+*.h5ad
+*.h5ad.gz
