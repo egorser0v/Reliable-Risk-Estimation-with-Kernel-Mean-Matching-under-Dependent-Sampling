@@ -1,6 +1,0 @@
-nohup: ignoring input
-usage: run_paper_benchmark.py [-h] [--reps REPS]
-                              [--n_sources N_SOURCES [N_SOURCES ...]]
-                              [--clip_bs CLIP_BS [CLIP_BS ...]]
-                              [--dataset {all,pm25,noaa,ozone}]
-run_paper_benchmark.py: error: unrecognized arguments: --n_jobs 10
